@@ -1,0 +1,51 @@
+body {
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  touch-action: none;
+}
+
+.container {
+  position: relative;
+  width: 600px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.base {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mosaic-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: repeat(22, 1fr);
+  z-index: 10;
+}
+
+.cell {
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(10px);
+  transition: opacity .08s;
+}
+
+/* UI中央表示（タッチ操作は透過） */
+.ui-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  object-fit: cover;
+  z-index: 20;
+}
