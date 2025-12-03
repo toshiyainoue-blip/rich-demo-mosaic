@@ -26,13 +26,13 @@ body {
   position: absolute;
   inset: 0;
   display: grid;
-  grid-template-columns: repeat(15, 1fr);
-  grid-template-rows: repeat(22, 1fr);
+  grid-template-columns: repeat(25, 1fr);
+  grid-template-rows: repeat(30, 1fr);
   z-index: 10;
 }
 
 .cell {
-  background: rgba(0,0,0,0.75);
+  background: rgba(0,0,0,0.15);
   backdrop-filter: blur(10px);
   transition: opacity .08s;
 }

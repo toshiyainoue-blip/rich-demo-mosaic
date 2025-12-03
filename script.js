@@ -1,6 +1,6 @@
 const overlay = document.getElementById("overlay");
-const cols = 15;
-const rows = 22;
+const cols = 25;
+const rows = 30;
 const cellCount = cols * rows;
 
 // Mosaicセル生成
